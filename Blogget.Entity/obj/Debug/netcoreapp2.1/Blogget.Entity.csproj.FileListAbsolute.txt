@@ -1,0 +1,12 @@
+C:\Users\gurhan\source\repos\Blogget\Blogget.Entity\bin\Debug\netcoreapp2.1\Blogget.Entity.deps.json
+C:\Users\gurhan\source\repos\Blogget\Blogget.Entity\bin\Debug\netcoreapp2.1\Blogget.Entity.dll
+C:\Users\gurhan\source\repos\Blogget\Blogget.Entity\bin\Debug\netcoreapp2.1\Blogget.Entity.pdb
+C:\Users\gurhan\source\repos\Blogget\Blogget.Entity\obj\Debug\netcoreapp2.1\Blogget.Entity.csprojAssemblyReference.cache
+C:\Users\gurhan\source\repos\Blogget\Blogget.Entity\obj\Debug\netcoreapp2.1\Blogget.Entity.AssemblyInfoInputs.cache
+C:\Users\gurhan\source\repos\Blogget\Blogget.Entity\obj\Debug\netcoreapp2.1\Blogget.Entity.AssemblyInfo.cs
+C:\Users\gurhan\source\repos\Blogget\Blogget.Entity\obj\Debug\netcoreapp2.1\Blogget.Entity.dll
+C:\Users\gurhan\source\repos\Blogget\Blogget.Entity\obj\Debug\netcoreapp2.1\Blogget.Entity.pdb
+C:\Users\gurhan\source\repos\Blogget\Blogget.Entity\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Mvc.Core.dll
+C:\Users\gurhan\source\repos\Blogget\Blogget.Entity\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Mvc.Core.xml
+C:\Users\gurhan\source\repos\Blogget\Blogget.Entity\obj\Debug\netcoreapp2.1\Blogget.Entity.csproj.CopyComplete
+C:\Users\gurhan\source\repos\Blogget\Blogget.Entity\obj\Debug\netcoreapp2.1\Blogget.Entity.csproj.CoreCompileInputs.cache

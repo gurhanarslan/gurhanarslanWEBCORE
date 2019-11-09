@@ -1,0 +1,89 @@
+﻿@model Blog
+@{
+    ViewData["Title"] = "Update";
+}
+@section sections{
+    <script src="~/lib/ckeditor/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace("Body")
+
+    </script>
+}
+
+<h2>Update</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-1 col-md-3 col-lg-2"></div>
+        <div class="col-10 col-md-6 col-lg-8">
+
+
+
+
+
+            <form asp-action="Uptade" method="post" enctype="multipart/form-data">
+
+                <input type="hidden" name="BlogId" id="BlogId" value="@Model.BlogId" />
+                <input type="hidden" name="Image" id="Image" value="@Model.Image" />
+
+                <div>
+                    <label asp-for="Title">Title</label>
+                    <input asp-for="Title" class="form-control" />
+                </div>
+                <div>
+                    <label asp-for="BlogHtml">Title</label>
+                    <input asp-for="BlogHtml" class="form-control" />
+                </div>
+                <div>
+                    <label asp-for="Description">Description</label>
+                    <textarea asp-for="Description" class="form-control"></textarea>
+                </div>
+                <div>
+                    <label asp-for="Body">Body</label>
+                    <textarea asp-for="Body" class="form-control"></textarea>
+                </div>
+
+                <div>
+                    <img src="~/img/@Model.Image" width="120" alt="Alternate Text" />
+                    <input type="file" name="file" id="file" class="form-control" />
+                </div>
+                <div>
+                    <label asp-for="CategoryId">Category</label>
+                    <select class="form-control" asp-for="CategoryId" asp-items="ViewBag.Categories">
+                        <option disabled selected value="">Seçiniz</option>
+
+                    </select>
+                </div>
+
+                <div class="form-check mt-2">
+                    <label class="form-check-label">
+                        <input asp-for="IsApproved" class="form-check-input" />
+                        Onayla
+                    </label>
+
+                </div>
+
+                <div class="form-check mt-2">
+                    <label class="form-check-label">
+                        <input asp-for="IsSlide" class="form-check-input" />
+                        Slider'a Ekle
+                    </label>
+
+                </div>
+
+
+                <input type="submit" value="Uptade" class="text-right btn btn-warning mt-3" />
+
+
+
+            </form>
+
+
+
+
+
+        </div>
+        <div class="col-1 col-md-3 col-lg-2"></div>
+    </div>
+</div>
+

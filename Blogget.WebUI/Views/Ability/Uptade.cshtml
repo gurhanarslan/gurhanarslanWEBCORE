@@ -1,0 +1,46 @@
+﻿@model Ability
+@{
+    ViewData["Title"] = "Uptade";
+}
+
+
+
+
+
+<form asp-action="Uptade" method="post">
+
+
+
+    <div class="container mt-5">
+        <div class="row">
+
+
+            <div class="col-1 col-md-3 "></div>
+            <div class="col-10 col-md-6 ">
+
+                <div>
+
+                    <input type="hidden" name="AlibityId" id="AlibityId" value="@Model.AlibityId" />
+
+                    <label>Kategori Adı </label>
+
+                    <input asp-for="AbilityName" class="form-control" />
+
+                </div>
+
+
+                <div class="text-right"> <input type="submit" value="Uptade" class="mt-4 btn btn-success" /> </div>
+
+
+            </div>
+            <div class="col-1 col-md-3 "></div>
+
+        </div>
+
+
+    </div>
+
+
+
+
+</form>

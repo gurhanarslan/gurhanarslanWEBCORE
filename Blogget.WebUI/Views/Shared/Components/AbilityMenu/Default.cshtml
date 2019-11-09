@@ -1,0 +1,17 @@
+﻿@model IEnumerable<Ability>
+
+
+<li class="dropdown">
+    <a href="#" class="dropdown-toggle  nav-link" data-toggle="dropdown" role="button"
+       aria-expanded="false">YETENEKLERİM</a>
+    <ul class="dropdown-menu " role="menu">
+
+        @foreach (var item in Model)
+        {
+
+            <li><a href="#" class="nav-link ml-3">@item.AbilityName</a></li>
+
+        }
+    </ul>
+
+</li>

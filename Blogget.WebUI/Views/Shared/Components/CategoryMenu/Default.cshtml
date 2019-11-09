@@ -1,0 +1,16 @@
+﻿@model IEnumerable<Category>
+
+<hr />
+<div class="container mt-5 text-center">
+    <nav aria-label="breadcrumb">
+        <ul class="breadcrumb">
+            @foreach (var item in Model)
+            {
+                <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Home" asp-route-id="@item.CategoryId">@item.Name</a></li>
+
+
+            }
+
+        </ul>
+    </nav>
+</div>

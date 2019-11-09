@@ -1,0 +1,99 @@
+﻿@model IEnumerable<Blog>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+
+
+
+<div class="container " id="ability">
+    <div class="text-right"> <a asp-action="Create" class="btn btn-primary">Create</a>   </div>
+    <div class="row">
+
+
+
+
+
+        @if (Model.Count() > 0)
+        {
+            @foreach (var item in Model)
+            {
+
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-10">
+
+                        <div class="col-12 col-md-6 col-lg-4 mx-md-0 text-center mt-5">
+
+                            <div class="card border border-warning" style="width: 18rem;">
+                                <img class="card-img-top img-card" src="~/img/@item.Image" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        @if (item.IsApproved == true)
+                                        {<span class="badge badge-pill badge-success mb-3">Onaylı</span> }
+                                        else
+                                        { <span class="badge badge-pill badge-danger mb-3 badges">Onaylı Değil </span>
+
+
+
+                                        } @if (item.IsSlide == true)
+                                        {<span class="badges badge badge-pill badge-primary mb-3">Slider</span>}
+                                        else
+                                        {
+                                        } <br /> @item.Title
+                                    </h5>
+                                    <p class="card-text">
+                                        @item.Description
+
+
+                                    </p>
+                                    <p class="card-text"> Yayınlanma Tarihi <br /> <strong> @item.Date </strong> </p>
+                                    <a asp-action="Details" asp-controller="Blog" asp-route-id="@item.BlogId"  class="mt-2 btn btn-warning">Siteyi İncele</a> <br />
+                                    <a asp-action="Uptade" asp-controller="Blog" asp-route-id="@item.BlogId" class="mt-2 btn btn-primary">Uptade</a>
+                                    <a asp-action="Delete" asp-controller="Blog" asp-route-id="@item.BlogId" class="mt-2 btn btn-danger">Delete</a>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            }
+
+        }
+        else
+        {
+            <div class="card text-center">
+                <div class="card-body border border-danger">
+                    <p>    Herhangi bir Web Tasarım Sayfanız Bulunmamaktadir. !! </p>
+
+                    Hemen yeni bir web site eklemek için <br /> <a asp-action="Create" asp-controller="Blog" class="btn btn-primary">Tıklayın</a>
+
+                </div>
+            </div>
+        }
+
+    </div>
+</div>
+
+<script>
+
+    $(document).ready(function () {
+        setInterval(function () {
+            if ($(".badges").css("opacity") == "1") {
+                $(".badges").css("opacity", "0");
+             
+            }
+            else {
+                $(".badges").css("opacity", "1");;
+            }
+        }, 500);
+    });
+</script>
+ 
+
+
+

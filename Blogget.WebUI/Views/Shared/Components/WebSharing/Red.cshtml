@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Blog>
+
+
+@foreach (var item in Model)
+{
+
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-10">
+
+            <div class="col-12 col-md-6 col-lg-4 bg-danger mx-md-0 text-center mt-2">
+
+                <div class="card border border-warning" style="width: 18rem;">
+                    <img class="card-img-top img-card" src="~/img/@item.Image" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">@item.Title</h5>
+                        <p class="card-text">
+                            @item.Description
+
+
+                        </p>
+                        <p class="card-text"> Yayınlanma Tarihi <br /> <strong> @item.Date </strong> </p>
+                        <a asp-action="Details" asp-controller="Blog" asp-route-id="@item.BlogId" class="mt-2 btn btn-warning">Siteyi İncele</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+}
+<hr />
